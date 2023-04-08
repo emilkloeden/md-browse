@@ -31,7 +31,7 @@ def get_html_string(file: str or Path = None, url: str = None, cache: bool = Fal
         return r.text
     return "".join(sys.stdin.readlines())
 
-def open(url, cache=False):
+def load(url, cache=False):
     html_string = get_html_string(url=url, cache=cache)
     clean_and_convert_to_markdown(html_string)
 
